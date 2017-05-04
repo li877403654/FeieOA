@@ -241,7 +241,7 @@ public class UserDaoImpl extends JdbcDaoSupport implements UserDao {
 	public int newuid() {
 		int i = 0;
 		try {
-			 i = this.getJdbcTemplate().queryForInt("SELECT MAX(uid) from user");
+			 i = this.getJdbcTemplate().queryForInt("SELECT MAX(cid) from user") ;
 		} catch (Exception e) {
 			return 0;
 		}
